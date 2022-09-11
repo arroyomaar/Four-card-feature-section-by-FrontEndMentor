@@ -1,0 +1,96 @@
+@import 'functions';
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+$Very_Dark_Blue: hsl(234, 12%, 34%);//titulos
+$Grayish_Blue: hsl(229, 6%, 66%);
+$Very_Light_Gray: hsl(0, 0%, 98%);
+$Font_size: 15px;
+$font-family: 'Poppins', sans-serif;
+
+@include reinicio_navegador();
+@include body_configuracion($font-family,$Font_size,400);
+body{
+    background-color:$Very_Light_Gray;
+}
+.container{
+    @include with_heigth(100%,100%,none);
+}
+.card{
+    margin: 90px 35px 80px 35px;
+    text-align: center;
+    @media screen and (min-width:1024px) {
+        margin: 90px 160px 80px 160px;
+    }
+}
+.text_content{
+    font-size: 25px;
+}
+.first_title{
+    font-weight: 200;
+}
+.second_titte{
+    margin-bottom: 30px;
+}
+.second_titte,.card_title{
+    font-weight: 600;
+    color: $Very_Dark_Blue;
+}
+.text{
+    margin-bottom: 80px;
+    @media screen and (min-width:1024px) {
+        width: 500px;
+        margin: 0 auto 80px;
+    }
+}
+.text,.card_text{
+    color: $Grayish_Blue;
+}
+.card_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width:1024px) {
+        flex-direction: row;
+        gap: 30px;
+        
+    }
+
+}
+.card_mold{
+    @include with_heigth(315px,225px,15px);
+    background-color: white;
+    text-align: left;
+    padding: 30px;
+    margin-bottom: 25px;
+    
+}
+.Supervisor{
+    border-top: 3px solid $Cyan;
+    box-shadow: -5px 5px 5px 0px $Grayish_Blue;
+}
+.card_title{
+    margin-bottom: 15px;
+}
+.card_text{
+    margin-bottom: 30px;
+}
+.card_img{
+    @include with_heigth(50px,50px,none);
+    margin-left: 200px;
+}
+.team_builder{
+    border-top: 3px solid $Red;
+    font-size: 14px;
+    box-shadow: -5px 5px 5px 0px $Grayish_Blue;
+}
+.Karma{
+    border-top: 3px solid $Orange;
+    box-shadow: -5px 5px 5px 0px $Grayish_Blue;
+}
+.Calculator{
+    border-top: 3px solid $Blue;
+    box-shadow: -5px 5px 5px 0px $Grayish_Blue;
+}
